@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Wibecreations and Books Store — original artworks, ebooks, creative tools, and professional book production services.">
+<title>Wibecreations & Books Store</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#20251f;--muted:#687066;--cream:#f7f4ec;--paper:#fffdf8;
+  --forest:#234739;--forest-dark:#173329;--sage:#afc0a7;--terracotta:#bd6749;
+  --gold:#d3aa58;--line:rgba(32,37,31,.13);--white:#fff;
+  --shadow:0 20px 60px rgba(28,50,40,.12);--radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{overflow-x:hidden;background:var(--cream);color:var(--ink);font-family:"DM Sans",sans-serif;line-height:1.6}
+body.locked{overflow:hidden}
+button,input,textarea,select{font:inherit}
+button,a{-webkit-tap-highlight-color:transparent}
+a{color:inherit;text-decoration:none}
+img{display:block;width:100%}
+.container{width:min(1160px,calc(100% - 40px));margin:auto}
+.serif{font-family:"Playfair Display",serif}
+.announcement{padding:9px 20px;background:var(--forest-dark);color:#ecf2eb;text-align:center;font-size:.78rem;letter-spacing:.08em}
+.announcement span{color:#f3cc7d;font-weight:700}
+header{position:sticky;top:0;z-index:50;border-bottom:1px solid transparent;background:rgba(247,244,236,.88);backdrop-filter:blur(16px);transition:.25s}
+header.scrolled{border-color:var(--line);box-shadow:0 8px 25px rgba(30,45,35,.07)}
+.nav{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:28px}
+.logo{display:flex;align-items:center;gap:11px;flex-shrink:0}
+.logo-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:50% 50% 45% 55%;background:var(--forest);color:var(--cream);font-family:"Playfair Display",serif;font-size:1.35rem;box-shadow:inset -5px -5px 12px #0002;transform:rotate(-5deg)}
+.logo-copy{line-height:1.05}.logo-copy strong{display:block;font-family:"Playfair Display",serif;font-size:1.05rem}.logo-copy small{color:var(--muted);font-size:.63rem;letter-spacing:.16em;text-transform:uppercase}
+.nav-links{display:flex;gap:28px;list-style:none}.nav-links a{position:relative;font-size:.87rem;font-weight:600}.nav-links a:after{position:absolute;right:0;bottom:-7px;left:0;height:2px;background:var(--terracotta);content:"";transform:scaleX(0);transition:.25s}.nav-links a:hover:after{transform:scaleX(1)}
+.nav-actions{display:flex;align-items:center;gap:9px}.icon-btn,.menu-btn{width:42px;height:42px;display:grid;place-items:center;border:1px solid var(--line);border-radius:50%;background:#ffffff8c;color:var(--ink);cursor:pointer;transition:.25s}.icon-btn:hover,.menu-btn:hover{background:var(--forest);color:white;transform:translateY(-2px)}.icon-btn svg,.menu-btn svg{width:19px;height:19px}.cart-count{position:absolute;top:-4px;right:-3px;min-width:18px;height:18px;display:grid;place-items:center;padding:0 4px;border:2px solid var(--cream);border-radius:20px;background:var(--terracotta);color:white;font-size:.61rem;font-weight:700}.cart-wrap{position:relative}.menu-btn{display:none}
+.hero{position:relative;overflow:hidden;padding:92px 0 85px;min-height:650px}.hero:before{position:absolute;top:-300px;right:-180px;width:700px;height:700px;border-radius:50%;background:radial-gradient(circle,#afc0a777,transparent 68%);content:""}.hero:after{position:absolute;bottom:-280px;left:-260px;width:650px;height:650px;border-radius:50%;background:radial-gradient(circle,#d3aa5833,transparent 68%);content:""}
+.hero-grid{position:relative;z-index:1;display:grid;grid-template-columns:.96fr 1.04fr;align-items:center;gap:70px}.eyebrow{display:inline-flex;align-items:center;gap:9px;margin-bottom:17px;color:var(--terracotta);font-size:.75rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase}.eyebrow:before{width:33px;height:1px;background:currentColor;content:""}.hero h1{max-width:650px;font-family:"Playfair Display",serif;font-size:clamp(3.3rem,6vw,6rem);font-weight:600;letter-spacing:-.055em;line-height:.97}.hero h1 em{color:var(--forest);font-weight:600}.hero-copy p{max-width:520px;margin:26px 0 31px;color:var(--muted);font-size:1.04rem}.hero-actions{display:flex;flex-wrap:wrap;gap:12px}
+.btn{min-height:50px;display:inline-flex;align-items:center;justify-content:center;gap:9px;padding:0 23px;border:1px solid transparent;border-radius:999px;font-size:.87rem;font-weight:700;cursor:pointer;transition:.25s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--forest);color:white;box-shadow:0 12px 24px #23473933}.btn-primary:hover{background:var(--forest-dark)}.btn-outline{border-color:#20251f40;background:#ffffff4d}.btn-outline:hover{background:white}
+.art-collage{position:relative;min-height:480px}.frame-main{position:absolute;top:8px;right:6%;width:68%;padding:15px;background:#e4d7be;box-shadow:0 30px 60px #20251f33;transform:rotate(3deg);animation:float 5s ease-in-out infinite}.frame-main img{height:385px;object-fit:cover}.frame-small{position:absolute;bottom:5px;left:0;z-index:2;width:45%;padding:11px;background:#f8f4e8;box-shadow:0 24px 45px #20251f2e;transform:rotate(-7deg);animation:float 5s 1s ease-in-out infinite}.frame-small img{height:210px;object-fit:cover}.art-stamp{position:absolute;top:48px;left:2%;z-index:3;width:105px;height:105px;display:grid;place-items:center;border:1px solid #23473955;border-radius:50%;background:#f7f4ece8;color:var(--forest);text-align:center;font-family:"Playfair Display",serif;font-size:.86rem;line-height:1.2;transform:rotate(-10deg)}@keyframes float{50%{transform:translateY(-9px) rotate(3deg)}}.frame-small{animation-name:floatSmall}@keyframes floatSmall{50%{transform:translateY(-9px) rotate(-7deg)}}
+.section{padding:96px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:25px;margin-bottom:35px}.section-head h2{font-family:"Playfair Display",serif;font-size:clamp(2.2rem,4vw,3.6rem);line-height:1}.section-head p{max-width:450px;color:var(--muted)}
+.feature-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden}.feature{padding:28px;background:var(--paper)}.feature-icon{width:39px;height:39px;display:grid;place-items:center;margin-bottom:18px;border-radius:12px;background:#afc0a744;color:var(--forest)}.feature h3{margin-bottom:6px;font-family:"Playfair Display",serif;font-size:1.3rem}.feature p{color:var(--muted);font-size:.86rem}
+.works{background:var(--paper)}.filter-bar{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:27px}.filter{padding:9px 17px;border:1px solid var(--line);border-radius:999px;background:transparent;color:var(--muted);cursor:pointer;font-size:.8rem}.filter.active,.filter:hover{border-color:var(--forest);background:var(--forest);color:white}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product-card{overflow:hidden;border:1px solid var(--line);border-radius:18px;background:var(--cream);transition:.3s}.product-card:hover{transform:translateY(-7px);box-shadow:var(--shadow)}.product-image{position:relative;height:280px;overflow:hidden}.product-image img{height:100%;object-fit:cover;transition:.5s}.product-card:hover img{transform:scale(1.05)}.badge{position:absolute;top:14px;left:14px;padding:5px 10px;border-radius:99px;background:var(--paper);font-size:.68rem;font-weight:700}.product-info{padding:19px}.product-info h3{font-family:"Playfair Display",serif;font-size:1.35rem}.product-info p{margin:5px 0 15px;color:var(--muted);font-size:.82rem}.product-row{display:flex;align-items:center;justify-content:space-between}.price{color:var(--forest);font-weight:700}.small-btn{padding:9px 14px;border:0;border-radius:99px;background:var(--forest);color:white;font-size:.75rem;font-weight:700;cursor:pointer}
+.tools-section{background:var(--forest);color:#f7f4ec}.tools-section .eyebrow{color:#e7bd72}.tools-section .section-head p{color:#c6d1c7}.tools-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:24px}.tool-card{border:1px solid #ffffff22;border-radius:22px;background:#ffffff0d;padding:25px}.tool-card h3{margin-bottom:7px;font-family:"Playfair Display",serif;font-size:1.55rem}.tool-card>p{margin-bottom:20px;color:#bdcabe;font-size:.88rem}.studio{overflow:hidden;border-radius:15px;background:#111d18}.studio-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;padding:12px;border-bottom:1px solid #ffffff1c}.studio-toolbar label{color:#cbd8cd;font-size:.74rem}.studio-toolbar input[type=color]{width:31px;height:30px;padding:2px;border:0;background:none}.studio-toolbar input[type=range]{width:92px;accent-color:#d3aa58}.tool-control{padding:7px 10px;border:1px solid #ffffff2b;border-radius:8px;background:#ffffff0b;color:white;font-size:.74rem;cursor:pointer}.tool-control:hover{background:#ffffff20}.canvas-wrap{padding:14px;background:#101713}.canvas-wrap canvas{display:block;width:100%;height:300px;border-radius:9px;background:#fffdf8;cursor:crosshair}.studio-footer{display:flex;justify-content:space-between;align-items:center;padding:11px 13px;color:#b8c9bc;font-size:.72rem}.upload-zone{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:210px;padding:25px;border:1px dashed #ffffff45;border-radius:15px;text-align:center;background:#ffffff09;cursor:pointer;transition:.25s}.upload-zone:hover,.upload-zone.dragging{border-color:#e7bd72;background:#ffffff15}.upload-zone svg{width:35px;margin-bottom:12px;color:#e7bd72}.upload-zone strong{display:block;margin-bottom:4px}.upload-zone span{color:#b8c9bc;font-size:.78rem}.file-list{margin-top:16px}.file-item{display:flex;align-items:center;justify-content:space-between;padding:10px 0;border-bottom:1px solid #ffffff19;font-size:.8rem}.file-item small{color:#b8c9bc}.file-item button{border:0;background:none;color:#e7bd72;cursor:pointer}
+.publisher{background:#eeeade}.workspace{display:grid;grid-template-columns:1fr 1fr;gap:24px}.editor,.preview{min-height:370px;padding:26px;border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 10px 35px #2347390d}.editor label{display:block;margin:0 0 7px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:.08em}.editor input,.editor textarea,.editor select{width:100%;margin-bottom:17px;padding:12px 14px;border:1px solid var(--line);border-radius:10px;outline:none;background:white;color:var(--ink)}.editor input:focus,.editor textarea:focus{border-color:var(--forest)}.editor textarea{min-height:135px;resize:vertical}.editor-actions{display:flex;flex-wrap:wrap;gap:9px}.preview{display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;background:linear-gradient(145deg,#234739,#173329);color:white}.preview .book-cover{width:180px;min-height:220px;display:flex;flex-direction:column;justify-content:center;padding:22px;border:8px solid #d3aa58;box-shadow:15px 18px 30px #0005;background:linear-gradient(145deg,#bd6749,#8b4534);transform:rotate(-3deg)}.book-cover h3{font-family:"Playfair Display",serif;font-size:1.5rem;line-height:1.05}.book-cover small{margin-top:20px;color:#f3d79d}.preview p{margin-top:24px;color:#b9c9bb;font-size:.82rem}
+.import-export{padding:70px 0;background:var(--paper)}.ie-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.ie-card{padding:25px;border:1px solid var(--line);border-radius:18px;background:var(--cream)}.ie-card h3{margin-bottom:8px;font-family:"Playfair Display",serif;font-size:1.35rem}.ie-card p{margin-bottom:17px;color:var(--muted);font-size:.82rem}
+footer{padding:55px 0 28px;background:var(--forest-dark);color:#eaf1ea}.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:40px;padding-bottom:43px}.footer-brand p{max-width:290px;margin-top:16px;color:#afc2b2;font-size:.85rem}.footer-title{margin-bottom:14px;color:#e4bd73;font-size:.75rem;font-weight:700;letter-spacing:.13em;text-transform:uppercase}.footer-links{display:grid;gap:8px;color:#bdcabe;font-size:.83rem}.footer-links a:hover{color:white}.footer-bottom{display:flex;justify-content:space-between;padding-top:22px;border-top:1px solid #ffffff20;color:#91a799;font-size:.75rem}
+.toast{position:fixed;right:22px;bottom:22px;z-index:100;max-width:320px;padding:14px 18px;border-radius:12px;background:var(--forest-dark);color:white;box-shadow:var(--shadow);font-size:.84rem;opacity:0;pointer-events:none;transform:translateY(15px);transition:.3s}.toast.show{opacity:1;transform:translateY(0)}
+.modal{position:fixed;inset:0;z-index:90;display:none;place-items:center;padding:20px;background:#13221999;backdrop-filter:blur(7px)}.modal.open{display:grid}.modal-box{position:relative;width:min(460px,100%);padding:30px;border-radius:22px;background:var(--paper);box-shadow:var(--shadow)}.modal-box h2{margin-bottom:9px;font-family:"Playfair Display",serif;font-size:2rem}.modal-box p{margin-bottom:22px;color:var(--muted);font-size:.9rem}.close-modal{position:absolute;top:16px;right:16px;border:0;background:none;color:var(--muted);font-size:1.4rem;cursor:pointer}
+@media(max-width:900px){.nav-links{gap:15px}.hero-grid{gap:35px}.feature-strip{grid-template-columns:repeat(2,1fr)}.footer-grid{grid-template-columns:1.5fr 1fr 1fr}.tools-grid,.workspace{grid-template-columns:1fr}}
+@media(max-width:680px){.container{width:min(100% - 28px,1160px)}.nav{min-height:68px}.nav-links{position:absolute;top:68px;right:14px;left:14px;display:none;padding:20px;border:1px solid var(--line);border-radius:15px;background:var(--paper);box-shadow:var(--shadow)}.nav-links.open{display:grid}.nav-actions .icon-btn{display:none}.menu-btn{display:grid}.hero{padding:65px 0 50px}.hero-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(3rem,15vw,4.5rem)}.art-collage{min-height:370px;margin-top:22px}.frame-main img{height:290px}.frame-small img{height:155px}.art-stamp{width:80px;height:80px;font-size:.68rem}.section{padding:65px 0}.section-head{display:block}.section-head p{margin-top:15px}.feature-strip,.product-grid,.ie-grid{grid-template-columns:1fr}.product-image{height:250px}.footer-grid{grid-template-columns:1fr 1fr;gap:27px}.footer-brand{grid-column:1/-1}.footer-bottom{display:block}.footer-bottom span{display:block;margin-top:7px}}
+</style>
+</head>
+<body>
+<div class="announcement">NEW SEASON COLLECTION · <span>Free digital delivery on all ebooks</span></div>
+
+<header id="header">
+  <div class="container nav">
+    <a href="#home" class="logo">
+      <span class="logo-mark">W</span>
+      <span class="logo-copy"><strong>wibecreations</strong><small>and books store</small></span>
+    </a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#artworks">Artworks</a></li>
+      <li><a href="#studio">Art Studio</a></li>
+      <li><a href="#publishing">Publishing</a></li>
+      <li><a href="#library">Library</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" aria-label="Search" onclick="showToast('Search is ready for your collection.')">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+      </button>
+      <div class="cart-wrap"><button class="icon-btn" aria-label="Shopping cart" onclick="openCart()">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M6 8h12l1 12H5L6 8Z"></path><path d="M9 8a3 3 0 0 1 6 0"></path></svg>
+      </button><span class="cart-count" id="cartCount">0</span></div>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h16"></path></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="home">
+  <div class="container hero-grid">
+    <div class="hero-copy">
+      <span class="eyebrow">Made with meaning</span>
+      <h1>Ideas become <em>beautiful</em> things.</h1>
+      <p>Discover original artwork, publish your stories, and bring every creative idea from a first sketch to a finished book.</p>
+      <div class="hero-actions">
+        <a href="#artworks" class="btn btn-primary">Explore the collection <span>→</span></a>
+        <a href="#studio" class="btn btn-outline">Open creative studio</a>
+      </div>
+    </div>
+    <div class="art-collage">
+      <div class="frame-main"><img src="https://images.unsplash.com/photo-1577083552431-6e5fd01aa342?auto=format&fit=crop&w=900&q=85" alt="Abstract colorful artwork"></div>
+      <div class="frame-small"><img src="https://images.unsplash.com/photo-1549490349-8643362247b5?auto=format&fit=crop&w=700&q=85" alt="Painted artwork"></div>
+      <div class="art-stamp">ART<br>FOR THE<br>CURIOUS</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="services">
+  <div class="container">
+    <div class="feature-strip">
+      <div class="feature"><div class="feature-icon">✦</div><h3>Original works</h3><p>Thoughtful, one-of-a-kind pieces for spaces with soul.</p></div>
+      <div class="feature"><div class="feature-icon">▱</div><h3>Book production</h3><p>From manuscript to polished ebook and print-ready files.</p></div>
+      <div class="feature"><div class="feature-icon">↗</div><h3>Creative tools</h3><p>Sketch, edit, organize and export your work in one place.</p></div>
+      <div class="feature"><div class="feature-icon">♡</div><h3>Human support</h3><p>Friendly guidance for every stage of your creative process.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="section works" id="artworks">
+  <div class="container">
+    <div class="section-head">
+      <div><span class="eyebrow">The current collection</span><h2>Works to live with.</h2></div>
+      <p>Collected paintings, prints and digital editions created in small batches and made to last.</p>
+    </div>
+    <div class="filter-bar">
+      <button class="filter active" data-filter="all">All works</button><button class="filter" data-filter="painting">Paintings</button><button class="filter" data-filter="print">Prints</button><button class="filter" data-filter="digital">Digital editions</button>
+    </div>
+    <div class="product-grid" id="productGrid">
+      <article class="product-card" data-type="painting"><div class="product-image"><img src="https://images.unsplash.com/photo-1547891654-e66ed7ebb968?auto=format&fit=crop&w=800&q=85" alt="Warm abstract painting"><span class="badge">Original</span></div><div class="product-info"><h3>Sunlit Memory</h3><p>Mixed media on cotton paper · 2024</p><div class="product-row"><span class="price">$280</span><button class="small-btn" onclick="addToCart('Sunlit Memory')">Add to cart</button></div></div></article>
+      <article class="product-card" data-type="print"><div class="product-image"><img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b6a5?auto=format&fit=crop&w=800&q=85" alt="Colorful framed print"><span class="badge">Limited print</span></div><div class="product-info"><h3>Garden Notes</h3><p>Archival giclée print · Edition of 30</p><div class="product-row"><span class="price">$48</span><button class="small-btn" onclick="addToCart('Garden Notes')">Add to cart</button></div></div></article>
+      <article class="product-card" data-type="digital"><div class="product-image"><img src="https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=800&q=85" alt="Gallery wall"><span class="badge">Instant download</span></div><div class="product-info"><h3>Quiet Forms</h3><p>Digital art pack · 12 high-resolution files</p><div class="product-row"><span class="price">$24</span><button class="small-btn" onclick="addToCart('Quiet Forms')">Add to cart</button></div></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="section tools-section" id="studio">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Your creative workspace</span><h2>Make something yours.</h2></div><p>Use the lightweight studio to sketch an idea, upload source material, and download your finished artwork.</p></div>
+    <div class="tools-grid">
+      <div class="tool-card">
+        <h3>Mini art studio</h3><p>Draw directly on the canvas. Your sketch is saved locally while you work.</p>
+        <div class="studio">
+          <div class="studio-toolbar">
+            <label>Color <input id="colorPicker" type="color" value="#234739"></label>
+            <label>Size <input id="brushSize" type="range" min="1" max="40" value="6"></label>
+            <button class="tool-control" id="eraserBtn">Eraser</button><button class="tool-control" id="clearBtn">Clear</button>
+          </div>
+          <div class="canvas-wrap"><canvas id="artCanvas" width="900" height="500"></canvas></div>
+          <div class="studio-footer"><span id="canvasStatus">Ready to create</span><button class="tool-control" id="downloadCanvas">Download PNG ↓</button></div>
+        </div>
+      </div>
+      <div class="tool-card">
+        <h3>Upload materials</h3><p>Bring in reference images, manuscripts, cover ideas or other project files.</p>
+        <label class="upload-zone" id="dropZone" for="fileInput">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24"><path d="M12 16V4m0 0L8 8m4-4 4 4M4 15v4a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-4"></path></svg>
+          <strong>Drop files here or browse</strong><span>Images, PDF, EPUB, DOCX · up to 25 MB</span>
+        </label>
+        <input type="file" id="fileInput" multiple hidden accept="image/*,.pdf,.epub,.doc,.docx,.txt">
+        <div class="file-list" id="fileList"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section publisher" id="publishing">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Publish with confidence</span><h2>Your story, beautifully bound.</h2></div><p>Draft your title, shape its presentation, and prepare a clear publishing brief before export.</p></div>
+    <div class="workspace">
+      <div class="editor">
+        <label for="bookTitle">Book title</label><input id="bookTitle" type="text" value="A Field Guide to Wonder" placeholder="Enter your book title">
+        <label for="bookAuthor">Author name</label><input id="bookAuthor" type="text" value="Your Name" placeholder="Enter author name">
+        <label for="bookDescription">Description</label><textarea id="bookDescription" placeholder="Write a short description">Notes, observations and small invitations to notice the beautiful things around us.</textarea>
+        <label for="bookFormat">Export format</label><select id="bookFormat"><option>EPUB ebook</option><option>PDF proof</option><option>Print-ready package</option></select>
+        <div class="editor-actions"><button class="btn btn-primary" id="updatePreview">Update preview</button><button class="btn btn-outline" id="saveDraft">Save draft</button></div>
+      </div>
+      <div class="preview"><div class="book-cover"><h3 id="previewTitle">A Field Guide<br>to Wonder</h3><small id="previewAuthor">Your Name</small></div><p id="previewDescription">Notes, observations and small invitations to notice the beautiful things around us.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="import-export" id="library">
+  <div class="container">
+    <div class="section-head"><div><span class="eyebrow">Manage your work</span><h2>Your creative library.</h2></div><p>Export project details for safekeeping or import a previous workspace whenever inspiration returns.</p></div>
+    <div class="ie-grid">
+      <div class="ie-card"><h3>Download project</h3><p>Save your current book details and studio status as a portable project file.</p><button class="btn btn-primary" id="exportBtn">Export project ↓</button></div>
+      <div class="ie-card"><h3>Import project</h3><p>Continue working with a project JSON file from another device or session.</p><label class="btn btn-outline" for="importInput">Import project ↑</label><input id="importInput" type="file" accept=".json" hidden></div>
+      <div class="ie-card"><h3>Production checklist</h3><p>Keep your launch moving with a simple checklist for every publication.</p><button class="btn btn-outline" onclick="showToast('Checklist opened — cover, metadata, proof and export.')">Open checklist</button></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand"><a href="#home" class="logo"><span class="logo-mark">W</span><span class="logo-copy"><strong>wibecreations</strong><small style="color:#afc2b2">and books store</small></span></a><p>A gentle home for original art, thoughtful books and the tools to make both.</p></div>
+      <div><div class="footer-title">Explore</div><div class="footer-links"><a href="#artworks">Artworks</a><a href="#studio">Art Studio</a><a href="#publishing">Publishing</a></div></div>
+      <div><div class="footer-title">Support</div><div class="footer-links"><a href="#library">Your library</a><a href="mailto:hello@wibecreations.com">Contact us</a><a href="#">Shipping & returns</a></div></div>
+      <div><div class="footer-title">Follow along</div><div class="footer-links"><a href="#">Instagram ↗</a><a href="#">Pinterest ↗</a><a href="#">Newsletter ↗</a></div></div>
+    </div>
+    <div class="footer-bottom"><span>© 2024 Wibecreations and Books Store</span><span>Made for curious minds and creative hands.</span></div>
+  </div>
+</footer>
+
+<div class="toast" id="toast"></div>
+<div class="modal" id="cartModal"><div class="modal-box"><button class="close-modal" onclick="closeCart()">×</button><h2>Your basket</h2><p id="cartMessage">Your basket is waiting for something beautiful.</p><button class="btn btn-primary" onclick="closeCart()">Continue browsing</button></div></div>
+
+<script>
+const $=s=>document.querySelector(s);
+const toastEl=$("#toast");
+function showToast(message){toastEl.textContent=message;toastEl.classList.add("show");clearTimeout(window.toastTimer);window.toastTimer=setTimeout(()=>toastEl.classList.remove("show"),3000)}
+window.addEventListener("scroll",()=>$("#header").classList.toggle("scrolled",scrollY>10));
+$("#menuBtn").addEventListener("click",()=>$("#navLinks").classList.toggle("open"));
+document.querySelectorAll(".nav-links a").forEach(a=>a.addEventListener("click",()=>$("#navLinks").classList.remove("open")));
+
+let cart=0;
+function addToCart(name){cart++;$("#cartCount").textContent=cart;showToast(name+" added to your basket.")}
+function openCart(){$("#cartMessage").textContent=cart?`You have ${cart} item${cart>1?"s":""} in your basket.":"Your basket is waiting for something beautiful.";$("#cartModal").classList.add("open")}
+function closeCart(){$("#cartModal").classList.remove("open")}
+$("#cartModal").addEventListener("click",e=>{if(e.target.id==="cartModal")closeCart()});
+
+document.querySelectorAll(".filter").forEach(btn=>btn.addEventListener("click",()=>{
+ document.querySelectorAll(".filter").forEach(x=>x.classList.remove("active"));btn.classList.add("active");
+ const type=btn.dataset.filter;document.querySelectorAll(".product-card").forEach(card=>card.style.display=type==="all"||card.dataset.type===type?"":"none");
+}));
+
+const canvas=$("#artCanvas"),ctx=canvas.getContext("2d");let drawing=false,eraser=false;
+function canvasPoint(e){const r=canvas.getBoundingClientRect();return{x:(e.clientX-r.left)*canvas.width/r.width,y:(e.clientY-r.top)*canvas.height/r.height}}
+function startDraw(e){drawing=true;const p=canvasPoint(e);ctx.beginPath();ctx.moveTo(p.x,p.y)}
+function draw(e){if(!drawing)return;const p=canvasPoint(e);ctx.lineTo(p.x,p.y);ctx.strokeStyle=eraser?"#fffdf8":$("#colorPicker").value;ctx.lineWidth=$("#brushSize").value;ctx.lineCap="round";ctx.lineJoin="round";ctx.stroke();$("#canvasStatus").textContent="Unsaved sketch"}
+function stopDraw(){drawing=false;localStorage.setItem("wibeSketch",canvas.toDataURL())}
+canvas.addEventListener("pointerdown",startDraw);canvas.addEventListener("pointermove",draw);window.addEventListener("pointerup",stopDraw);
+$("#eraserBtn").onclick=()=>{eraser=!eraser;$("#eraserBtn").textContent=eraser?"Brush":"Eraser";showToast(eraser?"Eraser enabled":"Brush enabled")};
+$("#clearBtn").onclick=()=>{ctx.clearRect(0,0,canvas.width,canvas.height);ctx.fillStyle="#fffdf8";ctx.fillRect(0,0,canvas.width,canvas.height);localStorage.removeItem("wibeSketch");$("#canvasStatus").textContent="Blank canvas";};
+$("#downloadCanvas").onclick=()=>{const a=document.createElement("a");a.download="wibecreations-sketch.png";a.href=canvas.toDataURL("image/png");a.click();showToast("Your artwork has been downloaded.")};
+const saved=localStorage.getItem("wibeSketch");if(saved){const image=new Image();image.onload=()=>ctx.drawImage(image,0,0);image.src=saved}else{$("#clearBtn").click()}
+
+const files=[];
+function addFiles(list){[...list].forEach(file=>{files.push(file);const row=document.createElement("div");row.className="file-item";row.innerHTML=`<span>${file.name}<br><small>${(file.size/1024/1024).toFixed(2)} MB</small></span><button>Remove</button>`;row.querySelector("button").onclick=()=>{files.splice(files.indexOf(file),1);row.remove()};$("#fileList").appendChild(row)});if(files.length)showToast(files.length+" material"+(files.length>1?"s":"")+" ready in your project.")}
+$("#fileInput").addEventListener("change",e=>addFiles(e.target.files));
+const drop=$("#dropZone");["dragenter","dragover"].forEach(x=>drop.addEventListener(x,e=>{e.preventDefault();drop.classList.add("dragging")}));["dragleave","drop"].forEach(x=>drop.addEventListener(x,e=>{e.preventDefault();drop.classList.remove("dragging")}));drop.addEventListener("drop",e=>addFiles(e.dataTransfer.files));
+
+function updatePreview(){const title=$("#bookTitle").value||"Untitled book",author=$("#bookAuthor").value||"Your Name";$("#previewTitle").innerHTML=title.replace(/\n/g,"<br>");$("#previewAuthor").textContent=author;$("#previewDescription").textContent=$("#bookDescription").value||"Your book description will appear here.";showToast("Book preview updated.")}
+$("#updatePreview").onclick=updatePreview;$("#saveDraft").onclick=()=>{localStorage.setItem("wibeBook",JSON.stringify({title:$("#bookTitle").value,author:$("#bookAuthor").value,description:$("#bookDescription").value,format:$("#bookFormat").value}));showToast("Draft saved to this browser.")};
+const savedBook=JSON.parse(localStorage.getItem("wibeBook")||"null");if(savedBook){$("#bookTitle").value=savedBook.title;$("#bookAuthor").value=savedBook.author;$("#bookDescription").value=savedBook.description;$("#bookFormat").value=savedBook.format;updatePreview()}
+function projectData(){return{book:{title:$("#bookTitle").value,author:$("#bookAuthor").value,description:$("#bookDescription").value,format:$("#bookFormat").value},created:new Date().toISOString(),materials:files.map(f=>f.name)}}
+$("#exportBtn").onclick=()=>{const blob=new Blob([JSON.stringify(projectData(),null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="wibecreations-project.json";a.click();showToast("Project exported successfully.")};
+$("#importInput").addEventListener("change",e=>{const reader=new FileReader();reader.onload=()=>{try{const d=JSON.parse(reader.result);if(d.book){$("#bookTitle").value=d.book.title||"";$("#bookAuthor").value=d.book.author||"";$("#bookDescription").value=d.book.description||"";$("#bookFormat").value=d.book.format||"EPUB ebook";updatePreview();showToast("Project imported successfully.")}}catch{showToast("That project file could not be read.")}};reader.readAsText(e.target.files[0])});
+</script>
+</body>
+</html>
